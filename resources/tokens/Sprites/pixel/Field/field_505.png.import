@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/field_505.png-f7129216fbcb4f312f517c1dc8e34247.stex"
+path="res://.import/field_505.png-35152377ef2263a1b93fd078de209436.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://build/resources/tokens/Sprites/pixel/Field/field_505.png"
-dest_files=[ "res://.import/field_505.png-f7129216fbcb4f312f517c1dc8e34247.stex" ]
+source_file="res://resources/tokens/Sprites/pixel/Field/field_505.png"
+dest_files=[ "res://.import/field_505.png-35152377ef2263a1b93fd078de209436.stex" ]
 
 [params]
 

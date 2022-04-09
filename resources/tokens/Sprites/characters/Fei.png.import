@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Fei.png-e6076a44308ca38a88820b20b4cf1557.stex"
+path="res://.import/Fei.png-547de0ee7020471565d220b4f5b8c365.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://build/resources/tokens/Sprites/characters/Fei.png"
-dest_files=[ "res://.import/Fei.png-e6076a44308ca38a88820b20b4cf1557.stex" ]
+source_file="res://resources/tokens/Sprites/characters/Fei.png"
+dest_files=[ "res://.import/Fei.png-547de0ee7020471565d220b4f5b8c365.stex" ]
 
 [params]
 

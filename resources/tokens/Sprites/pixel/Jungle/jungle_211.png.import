@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/jungle_211.png-68c3e4533c9e14f578c528f65092c7e9.stex"
+path="res://.import/jungle_211.png-213147004fe56566c8301019804c5a9a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://build/resources/tokens/Sprites/pixel/Jungle/jungle_211.png"
-dest_files=[ "res://.import/jungle_211.png-68c3e4533c9e14f578c528f65092c7e9.stex" ]
+source_file="res://resources/tokens/Sprites/pixel/Jungle/jungle_211.png"
+dest_files=[ "res://.import/jungle_211.png-213147004fe56566c8301019804c5a9a.stex" ]
 
 [params]
 

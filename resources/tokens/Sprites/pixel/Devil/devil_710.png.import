@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/devil_710.png-b531c1be221b76279064b4bfa43a59c2.stex"
+path="res://.import/devil_710.png-e9f1e2b7ae959311e9203d991869c341.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://build/resources/tokens/Sprites/pixel/Devil/devil_710.png"
-dest_files=[ "res://.import/devil_710.png-b531c1be221b76279064b4bfa43a59c2.stex" ]
+source_file="res://resources/tokens/Sprites/pixel/Devil/devil_710.png"
+dest_files=[ "res://.import/devil_710.png-e9f1e2b7ae959311e9203d991869c341.stex" ]
 
 [params]
 

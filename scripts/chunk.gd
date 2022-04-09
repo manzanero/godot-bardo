@@ -1,4 +1,5 @@
-class_name Chunk extends Spatial
+class_name Chunk 
+extends Spatial
 
 var dirty: bool
 var map: Map

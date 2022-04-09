@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ice_812.png-e17aba303c2e6fe6c8e9d1b9625f169e.stex"
+path="res://.import/ice_812.png-bf2a3fec49b51071b06899e56f67fcaf.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://build/resources/tokens/Sprites/pixel/Ice/ice_812.png"
-dest_files=[ "res://.import/ice_812.png-e17aba303c2e6fe6c8e9d1b9625f169e.stex" ]
+source_file="res://resources/tokens/Sprites/pixel/Ice/ice_812.png"
+dest_files=[ "res://.import/ice_812.png-bf2a3fec49b51071b06899e56f67fcaf.stex" ]
 
 [params]
 

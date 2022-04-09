@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/forest_407.png-cba397aa55cbd3466528a1ea9ffb4fb9.stex"
+path="res://.import/forest_407.png-810fe87ea480e3c73e2c935d750b56c6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://build/resources/tokens/Sprites/pixel/Forest/forest_407.png"
-dest_files=[ "res://.import/forest_407.png-cba397aa55cbd3466528a1ea9ffb4fb9.stex" ]
+source_file="res://resources/tokens/Sprites/pixel/Forest/forest_407.png"
+dest_files=[ "res://.import/forest_407.png-810fe87ea480e3c73e2c935d750b56c6.stex" ]
 
 [params]
 

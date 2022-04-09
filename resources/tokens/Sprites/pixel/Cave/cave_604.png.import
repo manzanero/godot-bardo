@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/cave_604.png-19bc80a0ed1ef40fd41e07c0fd90fde7.stex"
+path="res://.import/cave_604.png-3ce34242910575bb2f832e2eac0763e5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://build/resources/tokens/Sprites/pixel/Cave/cave_604.png"
-dest_files=[ "res://.import/cave_604.png-19bc80a0ed1ef40fd41e07c0fd90fde7.stex" ]
+source_file="res://resources/tokens/Sprites/pixel/Cave/cave_604.png"
+dest_files=[ "res://.import/cave_604.png-3ce34242910575bb2f832e2eac0763e5.stex" ]
 
 [params]
 

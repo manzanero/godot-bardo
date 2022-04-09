@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/undead_102.png-f1e60f29bbed82994905e4fa879a645c.stex"
+path="res://.import/undead_102.png-f457619b33e73233fe3b6c9472b0565b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://build/resources/tokens/Sprites/pixel/Undead/undead_102.png"
-dest_files=[ "res://.import/undead_102.png-f1e60f29bbed82994905e4fa879a645c.stex" ]
+source_file="res://resources/tokens/Sprites/pixel/Undead/undead_102.png"
+dest_files=[ "res://.import/undead_102.png-f457619b33e73233fe3b6c9472b0565b.stex" ]
 
 [params]
 
