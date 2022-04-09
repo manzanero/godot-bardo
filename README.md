@@ -1,2 +1,3 @@
 # godot-bardo
-Godot implentation for Bardo
+
+Godot implementation for Bardo

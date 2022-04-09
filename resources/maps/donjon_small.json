@@ -1,0 +1,1224 @@
+{
+  "cell_bit": {
+    "aperture": 32,
+    "arch": 65536,
+    "block": 1,
+    "corridor": 4,
+    "door": 131072,
+    "label": 4278190080,
+    "locked": 262144,
+    "nothing": 0,
+    "perimeter": 16,
+    "portcullis": 2097152,
+    "room": 2,
+    "room_id": 65472,
+    "secret": 1048576,
+    "stair_down": 4194304,
+    "stair_up": 8388608,
+    "trapped": 524288
+  },
+  "cells": [
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 0, 16, 16, 16, 16, 16, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 4, 0, 4, 4, 4, 4, 4, 4, 4, 4, 4, 0, 0, 16, 1346, 1346, 1346, 16, 0, 0, 0, 0, 4, 0, 0, 0, 4, 4, 4, 0, 4, 4, 4, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 4, 0, 4, 0, 0, 0, 0, 16, 16, 16, 2097156, 16, 0, 16, 1346, 838862146, 822084930, 16, 16, 16, 16, 16, 131076, 16, 16, 16, 4, 0, 4, 0, 4, 0, 4, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 4, 0, 4, 4, 4, 0, 0, 16, 578, 578, 578, 16, 0, 16, 1346, 1346, 1346, 2097156, 130, 130, 130, 130, 130, 130, 130, 16, 4, 0, 4, 4, 4, 0, 4, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 16, 578, 578, 578, 16, 16, 16, 1048580, 16, 16, 16, 130, 130, 130, 130, 130, 130, 130, 16, 4, 16, 16, 16, 16, 16, 4, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 4, 4, 4, 4, 4, 0, 0, 16, 578, 578, 578, 16, 1602, 1602, 1602, 1602, 1602, 16, 130, 130, 130, 130, 130, 130, 130, 131076, 4, 16, 1410, 1410, 1410, 16, 4, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 16, 16, 16, 16, 16, 16, 16, 16, 16, 578, 956301890, 578, 16, 1602, 1602, 838862402, 889194050, 1602, 16, 130, 130, 130, 838860930, 130, 130, 130, 16, 4, 16, 1410, 838862210, 838862210, 16, 4, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 16, 1090, 1090, 1090, 1090, 1090, 1090, 1090, 524292, 578, 578, 578, 16, 1602, 1602, 1602, 1602, 1602, 16, 130, 130, 130, 130, 130, 130, 130, 16, 4, 16, 1410, 1410, 1410, 16, 4, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 16, 1090, 1090, 1090, 1090, 1090, 1090, 1090, 16, 578, 578, 578, 16, 16, 16, 16, 16, 16, 16, 130, 130, 130, 130, 130, 130, 130, 16, 4, 16, 65540, 16, 16, 16, 4, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 16, 1090, 1090, 1090, 822084674, 922747970, 1090, 1090, 16, 578, 578, 578, 131076, 4, 4, 4, 4, 4, 16, 130, 130, 130, 130, 130, 130, 130, 16, 4, 4, 4, 0, 0, 0, 4, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 16, 1090, 1090, 1090, 1090, 1090, 1090, 1090, 16, 16, 16, 16, 16, 16, 16, 524292, 16, 16, 16, 16, 16, 131076, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 524292, 16, 0, 0, 0, 0],
+    [0, 0, 0, 0, 16, 1090, 1090, 1090, 1090, 1090, 1090, 1090, 16, 0, 16, 194, 194, 194, 194, 194, 194, 194, 16, 66, 66, 66, 66, 66, 66, 66, 16, 258, 258, 258, 258, 258, 258, 258, 16, 0, 0, 0, 0],
+    [0, 0, 0, 0, 16, 16, 16, 131076, 16, 16, 16, 131076, 16, 0, 16, 194, 194, 194, 194, 194, 194, 194, 16, 66, 66, 66, 66, 66, 66, 66, 16, 258, 258, 258, 258, 258, 258, 258, 16, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 4, 4, 4, 0, 4, 4, 4, 4, 4, 2097156, 194, 194, 194, 194, 194, 194, 194, 16, 66, 66, 66, 66, 66, 66, 66, 16, 258, 258, 258, 258, 258, 258, 258, 16, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 4, 16, 16, 16, 131076, 16, 16, 16, 16, 16, 194, 194, 194, 855638210, 194, 194, 194, 16, 66, 66, 66, 822083650, 66, 66, 66, 16, 258, 258, 258, 872415490, 258, 258, 258, 16, 0, 0, 0, 0],
+    [0, 4, 4, 4, 4, 4, 16, 1154, 1154, 1154, 1154, 1154, 1154, 1154, 16, 194, 194, 194, 194, 194, 194, 194, 16, 66, 66, 66, 66, 66, 66, 66, 16, 258, 258, 258, 258, 258, 258, 258, 1048580, 4, 4, 4, 0],
+    [0, 0, 0, 0, 0, 4, 16, 1154, 1154, 1154, 1154, 1154, 1154, 1154, 16, 194, 194, 194, 194, 194, 194, 194, 16, 66, 66, 66, 66, 66, 66, 66, 16, 258, 258, 258, 258, 258, 258, 258, 16, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 4, 16, 1154, 1154, 1154, 1154, 1154, 1154, 1154, 16, 194, 194, 194, 194, 194, 194, 194, 16, 66, 66, 66, 66, 66, 66, 66, 16, 258, 258, 258, 258, 258, 258, 258, 16, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 4, 16, 1154, 1154, 1154, 822084738, 939525250, 1154, 1154, 16, 16, 16, 16, 16, 131076, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 524292, 16, 16, 16, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 4, 16, 1154, 1154, 1154, 1154, 1154, 1154, 1154, 2097156, 4, 4, 4, 16, 1218, 1218, 1218, 16, 322, 322, 322, 322, 322, 322, 322, 16, 1474, 1474, 1474, 1474, 1474, 16, 4, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 4, 16, 1154, 1154, 1154, 1154, 1154, 1154, 1154, 16, 0, 0, 4, 16, 1218, 1218, 1218, 16, 322, 322, 322, 322, 322, 322, 322, 16, 1474, 1474, 1474, 1474, 1474, 16, 4, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 4, 16, 1154, 1154, 1154, 1154, 1154, 1154, 1154, 16, 4, 4, 4, 16, 1218, 822084802, 956302530, 16, 322, 322, 322, 322, 322, 322, 322, 16, 1474, 1474, 838862274, 855639490, 1474, 1048580, 4, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 4, 16, 16, 16, 131076, 16, 262148, 16, 16, 16, 2097156, 16, 16, 16, 1218, 1218, 1218, 16, 322, 322, 322, 889192770, 322, 322, 322, 16, 1474, 1474, 1474, 1474, 1474, 16, 4, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 4, 131076, 514, 514, 514, 16, 1282, 1282, 1282, 1282, 1282, 1282, 1282, 16, 1218, 1218, 1218, 65540, 322, 322, 322, 322, 322, 322, 322, 16, 1474, 1474, 1474, 1474, 1474, 16, 4, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 4, 16, 514, 514, 514, 16, 1282, 1282, 1282, 838862082, 805307650, 1282, 1282, 16, 16, 16, 16, 16, 322, 322, 322, 322, 322, 322, 322, 16, 16, 16, 524292, 16, 16, 16, 4, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 4, 16, 514, 514, 514, 65540, 1282, 1282, 1282, 1282, 1282, 1282, 1282, 131076, 4, 4, 4, 524292, 322, 322, 322, 322, 322, 322, 322, 16, 4194308, 4, 4, 0, 4, 4, 1627389956, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 4, 16, 514, 939524610, 514, 16, 16, 16, 16, 16, 16, 16, 16, 16, 0, 16, 16, 16, 524292, 16, 524292, 16, 16, 16, 16, 16, 16, 16, 131076, 16, 1048580, 16, 16, 16, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 4, 16, 514, 514, 514, 16, 0, 0, 0, 0, 0, 0, 0, 0, 0, 16, 962, 962, 962, 16, 1026, 1026, 1026, 1026, 1026, 1026, 1026, 16, 386, 386, 386, 386, 386, 16, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 4, 16, 514, 514, 514, 16, 0, 0, 0, 0, 0, 0, 0, 0, 0, 16, 962, 962, 962, 16, 1026, 1026, 1026, 1026, 1026, 1026, 1026, 16, 386, 386, 386, 386, 386, 16, 0, 0, 0, 0],
+    [0, 4, 4, 4, 4, 4, 16, 514, 514, 514, 16, 0, 0, 4, 4, 4, 4, 4, 4, 4, 524292, 962, 822084546, 889193410, 16, 1026, 1026, 1026, 1026, 1026, 1026, 1026, 16, 386, 386, 386, 386, 386, 524292, 4, 4, 4, 0],
+    [0, 0, 0, 0, 0, 4, 16, 16, 16, 16, 16, 16, 16, 4, 16, 16, 16, 16, 16, 16, 16, 962, 962, 962, 16, 1026, 1026, 1026, 822084610, 905970690, 1026, 1026, 16, 386, 386, 905970050, 386, 386, 16, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 4, 0, 4, 16, 834, 834, 834, 16, 4, 16, 642, 642, 642, 642, 642, 131076, 962, 962, 962, 16, 1026, 1026, 1026, 1026, 1026, 1026, 1026, 16, 386, 386, 386, 386, 386, 16, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 4, 0, 4, 16, 834, 834, 834, 16, 4, 16, 642, 642, 642, 642, 642, 16, 16, 16, 16, 16, 1026, 1026, 1026, 1026, 1026, 1026, 1026, 16, 386, 386, 386, 386, 386, 16, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 4, 0, 4, 16, 834, 834, 834, 16, 1660944388, 65540, 642, 642, 822084226, 805307010, 642, 131076, 4, 0, 0, 16, 1026, 1026, 1026, 1026, 1026, 1026, 1026, 131076, 386, 386, 386, 386, 386, 16, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 4, 0, 4, 16, 834, 822084418, 855638850, 16, 0, 16, 642, 642, 642, 642, 642, 16, 4, 0, 0, 16, 131076, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 131076, 16, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 4, 4, 4, 16, 834, 834, 834, 16, 0, 16, 642, 642, 642, 642, 642, 16, 4, 4, 4, 4, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 4, 16, 834, 834, 834, 16, 0, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 4, 0, 4, 16, 834, 834, 834, 16, 0, 0, 0, 0, 4, 4, 8388612, 16, 450, 450, 450, 16, 706, 706, 706, 706, 706, 706, 706, 16, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 4, 0, 4, 16, 16, 16, 65540, 16, 16, 16, 16, 16, 131076, 16, 16, 16, 450, 450, 450, 16, 706, 706, 706, 706, 706, 706, 706, 16, 16, 16, 16, 16, 4, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 4, 0, 4, 2097156, 770, 770, 770, 770, 770, 65540, 898, 898, 898, 898, 898, 524292, 450, 922747330, 450, 16, 706, 706, 706, 822084290, 822084290, 706, 706, 524292, 1538, 1538, 1538, 131076, 4, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 4, 0, 4, 16, 770, 770, 822084354, 838861570, 770, 16, 898, 898, 898, 898, 898, 16, 450, 450, 450, 16, 706, 706, 706, 706, 706, 706, 706, 16, 1538, 1538, 1538, 16, 4, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 4, 0, 4, 16, 770, 770, 770, 770, 770, 16, 898, 898, 822084482, 872416130, 898, 16, 450, 450, 450, 16, 706, 706, 706, 706, 706, 706, 706, 16, 1538, 838862338, 872416770, 16, 4, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 4, 0, 4, 16, 16, 16, 16, 16, 16, 16, 898, 898, 898, 898, 898, 16, 16, 16, 131076, 16, 16, 16, 131076, 16, 16, 16, 16, 16, 1538, 1538, 1538, 16, 4, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 4, 4, 4, 4, 4, 4, 4, 4, 4, 16, 898, 898, 898, 898, 898, 16, 0, 0, 4, 4, 1694498820, 4, 4, 0, 0, 0, 0, 16, 1538, 1538, 1538, 1048580, 4, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 16, 131076, 16, 16, 16, 16, 16, 0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 16, 16, 16, 16, 16, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  ],
+  "corridor_features": {
+    "a": {
+      "detail": "Numerous pillars line the corridor",
+      "key": "a",
+      "marks": [{
+        "col": 37,
+        "row": 29
+      }],
+      "summary": "Numerous pillars line the corridor"
+    },
+    "c": {
+      "detail": "Acid Spray: DC 15 to find, DC 20 to disable;\n    affects all targets within a 20 ft. cone, DC 13 save or take 1d10 acid damage\n    for 1d4 rounds",
+      "key": "c",
+      "marks": [{
+        "col": 13,
+        "row": 37
+      }],
+      "summary": "Acid Spray"
+    },
+    "e": {
+      "detail": "Someone has scrawled \"The gold is cursed\" in dwarvish runes here",
+      "key": "e",
+      "marks": [{
+        "col": 25,
+        "row": 47
+      }],
+      "summary": "Someone has scrawled \"The gold is cursed\" in dwarvish runes here"
+    }
+  },
+  "details": {
+    "floor": "Uneven Flagstone (DC 10 to charge or run)",
+    "history": "The dungeon was created by drow elves as a lair. Its creators were destroyed by a terrible discovery, and the dungeon has fallen to ruin and been rebuilt many times since then.",
+    "illumination": "Average (shadowy in corridors, lamps or torches in most rooms)",
+    "special": null,
+    "temperature": "Cool",
+    "walls": "Reinforced Masonry (DC 15 to climb)"
+  },
+  "egress": [
+    {
+    "col": 1,
+    "depth": 0,
+    "dir": "west",
+    "row": 15,
+    "type": "corridor"
+  }, {
+    "col": 33,
+    "depth": 0,
+    "dir": "east",
+    "room_id": 4,
+    "row": 15,
+    "type": "room"
+  }, {
+    "col": 1,
+    "depth": 0,
+    "dir": "west",
+    "row": 29,
+    "type": "corridor"
+  }, {
+    "col": 33,
+    "depth": 0,
+    "dir": "east",
+    "room_id": 6,
+    "row": 29,
+    "type": "room"
+  }, {
+    "col": 11,
+    "depth": 0,
+    "dir": "north",
+    "row": 1,
+    "type": "corridor"
+  }, {
+    "col": 11,
+    "depth": 0,
+    "dir": "south",
+    "room_id": 14,
+    "row": 43,
+    "type": "room"
+  }, {
+    "col": 23,
+    "depth": 2,
+    "dir": "north",
+    "room_id": 2,
+    "row": 3,
+    "type": "room"
+  }, {
+    "col": 23,
+    "depth": 0,
+    "dir": "south",
+    "row": 43,
+    "type": "corridor"
+  }
+  ],
+  "rooms": [
+    null, 
+    {
+    "area": 4900,
+    "col": 19,
+    "contents": {
+      "detail": {
+        "monster": ["Silver Dragon Wyrmling (cr 2, mm 118); deadly, 450 xp", "--", "Treasure: 18 sp"]
+      },
+      "inhabited": "Silver Dragon Wyrmling",
+      "summary": "Silver Dragon Wyrmling"
+    },
+    "doors": {
+      "north": [{
+        "col": 21,
+        "desc": "Stuck Strong Wooden Door (DC 15 to break; 20 hp) (slides up)",
+        "out_id": 2,
+        "row": 10,
+        "type": "door"
+      }]
+    },
+    "east": 25,
+    "height": 70,
+    "id": 1,
+    "north": 11,
+    "row": 11,
+    "shape": "circle",
+    "size": "",
+    "south": 17,
+    "west": 19,
+    "width": 70
+  }, {
+    "area": 4900,
+    "col": 19,
+    "contents": {
+      "detail": {
+        "hidden_treasure": ["Hidden (DC 20 to find) Locked Iron Chest (DC 25 to unlock, DC 30 to break; 60 hp)", "--", "2100 cp, 1500 sp, 50 gp, 2 x hematite (10 gp), moss agate (10 gp), 2 x tiger eye (10 gp)"],
+        "trap": ["Falling Block: DC 15 to find, DC 15 to disable;\n    affects all targets within a 10 ft. square area, DC 12 save or take 2d10 damage"]
+      },
+      "summary": "Falling Block, Hidden Treasure"
+    },
+    "doors": {
+      "east": [{
+        "col": 26,
+        "desc": "Stuck Strong Wooden Door (DC 15 to break; 20 hp) (slides down)",
+        "row": 5,
+        "type": "door"
+      }],
+      "north": [{
+        "col": 23,
+        "desc": "Stuck Strong Wooden Door (DC 15 to break; 20 hp)",
+        "row": 2,
+        "type": "door"
+      }],
+      "south": [{
+        "col": 21,
+        "desc": "Stuck Strong Wooden Door (DC 15 to break; 20 hp) (slides up)",
+        "out_id": 1,
+        "row": 10,
+        "type": "door"
+      }],
+      "west": [{
+        "col": 18,
+        "desc": "Wooden Portcullis (lift DC 20, DC 15 to break; 30 hp)",
+        "out_id": 21,
+        "row": 3,
+        "type": "portcullis"
+      }]
+    },
+    "east": 25,
+    "height": 70,
+    "id": 2,
+    "north": 3,
+    "row": 3,
+    "shape": "square",
+    "size": "",
+    "south": 9,
+    "west": 19,
+    "width": 70
+  }, {
+    "area": 4900,
+    "col": 11,
+    "contents": {
+      "detail": {
+        "room_features": "Burning torches in iron sconces line the east wall, and a rusted gauntlet lies in the east side of the room"
+      },
+      "summary": "Empty"
+    },
+    "doors": {
+      "north": [{
+        "col": 15,
+        "desc": "Trapped and Stuck Good Wooden Door (DC 15 to break; 15 hp)",
+        "row": 10,
+        "trap": "Acid Spray: DC 15 to find, DC 15 to disable;\n    affects all targets within a 20 ft. cone, DC 14 save or take 1d10 acid damage\n    for 1d4 rounds",
+        "type": "trapped"
+      }],
+      "south": [{
+        "col": 15,
+        "desc": "Stuck Simple Wooden Door (DC 10 to break; 10 hp)",
+        "out_id": 19,
+        "row": 18,
+        "type": "door"
+      }],
+      "west": [{
+        "col": 10,
+        "desc": "Wooden Portcullis (lift DC 20, DC 15 to break; 30 hp)",
+        "row": 13,
+        "type": "portcullis"
+      }]
+    },
+    "east": 17,
+    "height": 70,
+    "id": 3,
+    "north": 11,
+    "row": 11,
+    "shape": "square",
+    "size": "",
+    "south": 17,
+    "west": 11,
+    "width": 70
+  }, {
+    "area": 4900,
+    "col": 27,
+    "contents": {
+      "detail": {
+        "monster": ["Hobgoblin (cr 1/2, mm 186) and 2 x Goblin (cr 1/4, mm 166); deadly, 200 xp", "--", "Treasure: 17 cp; 14 gp; 6 pp"],
+        "room_features": "A narrow pit covered by iron bars lies in the west side of the room, and several pieces of rotten leather are scattered throughout the room"
+      },
+      "inhabited": "Hobgoblin and 2 x Goblin",
+      "summary": "Hobgoblin and 2 x Goblin"
+    },
+    "doors": {
+      "east": [{
+        "col": 34,
+        "desc": "Secret (DC 25 to find) Locked Simple Wooden Door (DC 25 to open, DC 15 to break; 10 hp) (slides to one side)",
+        "row": 15,
+        "secret": "The door is concealed within an upright sarcophagus",
+        "type": "secret"
+      }],
+      "north": [{
+        "col": 33,
+        "desc": "Trapped and Locked Iron Door (DC 15 to open, DC 30 to break; 60 hp)",
+        "row": 10,
+        "trap": "Electrified Lock: DC 20 to find, DC 15 to disable;\n    affects each creature which touches the lock, DC 11 save or take 1d10 lightning damage",
+        "type": "trapped"
+      }],
+      "south": [{
+        "col": 31,
+        "desc": "Trapped and Stuck Stone Door (DC 20 to break; 60 hp)",
+        "out_id": 23,
+        "row": 18,
+        "trap": "One-way Door: DC 15 to find, DC 10 to disable",
+        "type": "trapped"
+      }]
+    },
+    "east": 33,
+    "height": 70,
+    "id": 4,
+    "north": 11,
+    "row": 11,
+    "shape": "square",
+    "size": "",
+    "south": 17,
+    "west": 27,
+    "width": 70
+  }, {
+    "area": 4900,
+    "col": 19,
+    "contents": {
+      "detail": {
+        "room_features": "Someone has scrawled \"Save yourself, kill the others\" in blood on the north wall, and a stream of water flows into the room through a hole in the ceiling"
+      },
+      "summary": "Empty"
+    },
+    "doors": {
+      "south": [{
+        "col": 19,
+        "desc": "Trapped and Locked Simple Wooden Door (DC 10 to open, DC 15 to break; 10 hp)",
+        "out_id": 15,
+        "row": 26,
+        "trap": "Guillotine Blade: DC 15 to find, DC 10 to disable;\n    +11 to hit against one target, 4d10 slashing damage",
+        "type": "trapped"
+      }, {
+        "col": 21,
+        "desc": "Trapped and Stuck Stone Door (DC 20 to break; 60 hp)",
+        "out_id": 16,
+        "row": 26,
+        "trap": "Teleporter Crystal: DC 10 to find, DC 15 to disable;\n    affects each creature which touches the crystal, DC 11 save or be teleported to another location",
+        "type": "trapped"
+      }],
+      "west": [{
+        "col": 18,
+        "desc": "Trapped and Unlocked Iron Door (60 hp)",
+        "row": 25,
+        "trap": "Arrow Trap: DC 10 to find, DC 15 to disable;\n    +3 to hit against one target, 1d10 piercing damage",
+        "type": "trapped"
+      }, {
+        "col": 18,
+        "desc": "Archway",
+        "out_id": 19,
+        "row": 23,
+        "type": "arch"
+      }]
+    },
+    "east": 25,
+    "height": 70,
+    "id": 5,
+    "north": 19,
+    "row": 19,
+    "shape": "square",
+    "size": "",
+    "south": 25,
+    "west": 19,
+    "width": 70
+  }, {
+    "area": 3500,
+    "col": 29,
+    "contents": {
+      "summary": "Empty"
+    },
+    "doors": {
+      "east": [{
+        "col": 34,
+        "desc": "Trapped and Locked Strong Wooden Door (DC 20 to open, DC 20 to break; 20 hp)",
+        "row": 29,
+        "trap": "Contact Poison: DC 10 to find, DC 15 to disable;\n    affects each creature which touches the trigger, DC 10 save or take 1d10 damage",
+        "type": "trapped"
+      }],
+      "north": [{
+        "col": 29,
+        "desc": "Stuck Strong Wooden Door (DC 15 to break; 20 hp)",
+        "row": 26,
+        "type": "door"
+      }, {
+        "col": 31,
+        "desc": "Secret (DC 25 to find) Trapped and Unlocked Good Wooden Door (15 hp) (slides up)",
+        "row": 26,
+        "secret": "The door is concealed within an upright sarcophagus",
+        "trap": "Symbol of Hypnosis: DC 10 to find, DC 15 to disable;\n    affects all targets within 10 ft., DC 12 save or become incapacitated for 1d4 rounds",
+        "type": "secret"
+      }],
+      "south": [{
+        "col": 33,
+        "desc": "Unlocked Stone Door (60 hp)",
+        "row": 34,
+        "type": "door"
+      }],
+      "west": [{
+        "col": 28,
+        "desc": "Stuck Simple Wooden Door (DC 10 to break; 10 hp) (slides to one side)",
+        "out_id": 16,
+        "row": 33,
+        "type": "door"
+      }]
+    },
+    "east": 33,
+    "height": 70,
+    "id": 6,
+    "north": 27,
+    "row": 27,
+    "shape": "square",
+    "size": "medium",
+    "south": 33,
+    "west": 29,
+    "width": 50
+  }, {
+    "area": 1500,
+    "col": 17,
+    "contents": {
+      "summary": "Empty"
+    },
+    "doors": {
+      "south": [{
+        "col": 19,
+        "desc": "Unlocked Simple Wooden Door (10 hp)",
+        "row": 42,
+        "type": "door"
+      }],
+      "west": [{
+        "col": 16,
+        "desc": "Trapped and Stuck Stone Door (DC 20 to break; 60 hp)",
+        "out_id": 14,
+        "row": 39,
+        "trap": "Teleporter Crystal: DC 15 to find, DC 15 to disable;\n    affects each creature which touches the crystal, DC 14 save or be teleported to another location",
+        "type": "trapped"
+      }]
+    },
+    "east": 19,
+    "height": 50,
+    "id": 7,
+    "north": 37,
+    "row": 37,
+    "shape": "square",
+    "size": "medium",
+    "south": 41,
+    "west": 17,
+    "width": 30
+  }, {
+    "area": 2100,
+    "col": 3,
+    "contents": {
+      "summary": "Empty"
+    },
+    "doors": {
+      "east": [{
+        "col": 6,
+        "desc": "Archway",
+        "out_id": 20,
+        "row": 25,
+        "type": "arch"
+      }],
+      "north": [{
+        "col": 5,
+        "desc": "Unlocked Good Wooden Door (15 hp)",
+        "out_id": 18,
+        "row": 22,
+        "type": "door"
+      }],
+      "west": [{
+        "col": 2,
+        "desc": "Stuck Strong Wooden Door (DC 15 to break; 20 hp)",
+        "row": 23,
+        "type": "door"
+      }]
+    },
+    "east": 5,
+    "height": 70,
+    "id": 8,
+    "north": 23,
+    "row": 23,
+    "shape": "square",
+    "size": "medium",
+    "south": 29,
+    "west": 3,
+    "width": 30
+  }, {
+    "area": 2100,
+    "col": 9,
+    "contents": {
+      "summary": "Empty"
+    },
+    "doors": {
+      "east": [{
+        "col": 12,
+        "desc": "Unlocked Simple Wooden Door (10 hp)",
+        "row": 9,
+        "type": "door"
+      }],
+      "north": [{
+        "col": 11,
+        "desc": "Trapped Wooden Portcullis (lift DC 20, DC 15 to break; 30 hp)",
+        "row": 2,
+        "trap": "Earthmaw Trap: DC 15 to find, DC 15 to disable;\n    +4 to hit against one target, 1d10 piercing damage",
+        "type": "portcullis"
+      }],
+      "west": [{
+        "col": 8,
+        "desc": "Trapped and Stuck Strong Wooden Door (DC 15 to break; 20 hp)",
+        "out_id": 17,
+        "row": 7,
+        "trap": "Acid Spray: DC 20 to find, DC 15 to disable;\n    affects all targets within a 20 ft. cone, DC 18 save or take 2d10 acid damage\n    for 1d4 rounds",
+        "type": "trapped"
+      }]
+    },
+    "east": 11,
+    "height": 70,
+    "id": 9,
+    "north": 3,
+    "row": 3,
+    "shape": "square",
+    "size": "medium",
+    "south": 9,
+    "west": 9,
+    "width": 30
+  }, {
+    "area": 2500,
+    "col": 11,
+    "contents": {
+      "detail": {
+        "monster": ["Orog (cr 2, mm 247); deadly, 450 xp", "--", "Treasure: 16 sp"]
+      },
+      "inhabited": "Orog",
+      "summary": "Orog"
+    },
+    "doors": {
+      "east": [{
+        "col": 16,
+        "desc": "Stuck Simple Wooden Door (DC 10 to break; 10 hp) (slides down)",
+        "row": 33,
+        "type": "door"
+      }, {
+        "col": 16,
+        "desc": "Stuck Simple Wooden Door (DC 10 to break; 10 hp)",
+        "out_id": 15,
+        "row": 31,
+        "type": "door"
+      }],
+      "west": [{
+        "col": 10,
+        "desc": "Archway",
+        "row": 33,
+        "type": "arch"
+      }]
+    },
+    "east": 15,
+    "height": 50,
+    "id": 10,
+    "north": 31,
+    "row": 31,
+    "shape": "circle",
+    "size": "medium",
+    "south": 35,
+    "west": 11,
+    "width": 50
+  }, {
+    "area": 3500,
+    "col": 21,
+    "contents": {
+      "detail": {
+        "room_features": "Several square holes are cut into the ceiling and floor, and a pile of rotten bread lies in the north-west corner of the room"
+      },
+      "summary": "Empty"
+    },
+    "doors": {
+      "east": [{
+        "col": 28,
+        "desc": "Trapped and Stuck Simple Wooden Door (DC 10 to break; 10 hp)",
+        "out_id": 24,
+        "row": 39,
+        "trap": "Ice Dart Trap: DC 10 to find, DC 15 to disable;\n    +7 to hit against one target, 2d10 cold damage",
+        "type": "trapped"
+      }],
+      "south": [{
+        "col": 23,
+        "desc": "Unlocked Good Wooden Door (15 hp)",
+        "row": 42,
+        "type": "door"
+      }]
+    },
+    "east": 27,
+    "height": 50,
+    "id": 11,
+    "north": 37,
+    "row": 37,
+    "shape": "square",
+    "size": "medium",
+    "south": 41,
+    "west": 21,
+    "width": 70
+  }, {
+    "area": 1500,
+    "col": 5,
+    "contents": {
+      "detail": {
+        "hidden_treasure": ["Hidden (DC 15 to find) Trapped and Locked Iron Chest (DC 20 to unlock, DC 30 to break; 60 hp)", "Rune of Hypnosis: DC 10 to find, DC 15 to disable;\n    affects all targets within 10 ft., DC 15 save or become incapacitated for 1d4 rounds", "--", "1400 cp, 1100 sp, 50 gp, azurite (10 gp), 2 x banded agate (10 gp), blue quartz (10 gp), lapis lazuli (10 gp), obsidian (10 gp), 2 x turquoise (10 gp), Potion of Greater Healing (uncommon, dmg 187), 4 x Potion of Healing (common, dmg 187)"],
+        "monster": ["Ogre Zombie (cr 2, mm 316); deadly, 450 xp", "--", "Treasure: 22 cp"],
+        "room_features": "A toppled statue lies in the south side of the room, and a ruined chain shirt lies in the south-west corner of the room"
+      },
+      "inhabited": "Ogre Zombie",
+      "summary": "Ogre Zombie, Hidden Treasure"
+    },
+    "doors": {
+      "east": [{
+        "col": 10,
+        "desc": "Archway",
+        "out_id": 14,
+        "row": 39,
+        "type": "arch"
+      }],
+      "north": [{
+        "col": 7,
+        "desc": "Archway",
+        "out_id": 13,
+        "row": 38,
+        "type": "arch"
+      }],
+      "west": [{
+        "col": 4,
+        "desc": "Wooden Portcullis (lift DC 20, DC 15 to break; 30 hp)",
+        "row": 39,
+        "type": "portcullis"
+      }]
+    },
+    "east": 9,
+    "height": 30,
+    "id": 12,
+    "north": 39,
+    "row": 39,
+    "shape": "square",
+    "size": "medium",
+    "south": 41,
+    "west": 5,
+    "width": 50
+  }, {
+    "area": 2100,
+    "col": 5,
+    "contents": {
+      "detail": {
+        "room_features": "A magical idol in the west side of the room heals all wounds of whomever offers a prayer (but only once), and a tile mosaic of a legendary battle covers the floor"
+      },
+      "summary": "Empty"
+    },
+    "doors": {
+      "south": [{
+        "col": 7,
+        "desc": "Archway",
+        "out_id": 12,
+        "row": 38,
+        "type": "arch"
+      }]
+    },
+    "east": 7,
+    "height": 70,
+    "id": 13,
+    "north": 31,
+    "row": 31,
+    "shape": "square",
+    "size": "medium",
+    "south": 37,
+    "west": 5,
+    "width": 30
+  }, {
+    "area": 2500,
+    "col": 11,
+    "contents": {
+      "detail": {
+        "hidden_treasure": ["Hidden (DC 20 to find) Locked Good Wooden Chest (DC 15 to unlock, DC 20 to break; 15 hp)", "--", "3000 cp, 800 sp, 60 gp, a cloth gown trimmed with rabbit fur (25 gp), a fine leather merchant's cap adorned with a plume (25 gp), a marble rod set with amber and amethyst (25 gp), a steel ring brooch inlaid with silver (25 gp), a stoneware cup painted with woodland imagery (25 gp), an agateware tile painted with mythical imagery (25 gp), Spell Scroll (Dancing Lights) (common, dmg 200), Spell Scroll (Shocking Grasp) (common, dmg 200), Spell Scroll (Hex) (common, dmg 200), 3 x Potion of Healing (common, dmg 187)"],
+        "room_features": "Several square holes are cut into the east wall, and a simple fireplace sits against the north wall"
+      },
+      "summary": "Hidden Treasure"
+    },
+    "doors": {
+      "east": [{
+        "col": 16,
+        "desc": "Trapped and Stuck Stone Door (DC 20 to break; 60 hp)",
+        "out_id": 7,
+        "row": 39,
+        "trap": "Teleporter Crystal: DC 15 to find, DC 15 to disable;\n    affects each creature which touches the crystal, DC 14 save or be teleported to another location",
+        "type": "trapped"
+      }],
+      "north": [{
+        "col": 13,
+        "desc": "Stuck Good Wooden Door (DC 15 to break; 15 hp)",
+        "row": 38,
+        "type": "door"
+      }],
+      "south": [{
+        "col": 11,
+        "desc": "Stuck Simple Wooden Door (DC 10 to break; 10 hp)",
+        "row": 44,
+        "type": "door"
+      }],
+      "west": [{
+        "col": 10,
+        "desc": "Archway",
+        "out_id": 12,
+        "row": 39,
+        "type": "arch"
+      }]
+    },
+    "east": 15,
+    "height": 50,
+    "id": 14,
+    "north": 39,
+    "row": 39,
+    "shape": "square",
+    "size": "medium",
+    "south": 43,
+    "west": 11,
+    "width": 50
+  }, {
+    "area": 1500,
+    "col": 17,
+    "contents": {
+      "detail": {
+        "room_features": "Mournful weeping can be heard in the north-west corner of the room, and a pile of rotting wood lies in the south-east corner of the room"
+      },
+      "summary": "Empty"
+    },
+    "doors": {
+      "north": [{
+        "col": 19,
+        "desc": "Trapped and Locked Simple Wooden Door (DC 10 to open, DC 15 to break; 10 hp)",
+        "out_id": 5,
+        "row": 26,
+        "trap": "Guillotine Blade: DC 15 to find, DC 10 to disable;\n    +11 to hit against one target, 4d10 slashing damage",
+        "type": "trapped"
+      }],
+      "west": [{
+        "col": 16,
+        "desc": "Stuck Simple Wooden Door (DC 10 to break; 10 hp)",
+        "out_id": 10,
+        "row": 31,
+        "type": "door"
+      }, {
+        "col": 16,
+        "desc": "Trapped and Stuck Iron Door (DC 25 to break; 60 hp)",
+        "row": 29,
+        "trap": "Acid Spray: DC 15 to find, DC 15 to disable;\n    affects all targets within a 20 ft. cone, DC 10 save or take 1d10 acid damage\n    for 1d4 rounds",
+        "type": "trapped"
+      }]
+    },
+    "east": 19,
+    "height": 50,
+    "id": 15,
+    "north": 27,
+    "row": 27,
+    "shape": "square",
+    "size": "medium",
+    "south": 31,
+    "west": 17,
+    "width": 30
+  }, {
+    "area": 4900,
+    "col": 21,
+    "contents": {
+      "summary": "Empty"
+    },
+    "doors": {
+      "east": [{
+        "col": 28,
+        "desc": "Stuck Simple Wooden Door (DC 10 to break; 10 hp) (slides to one side)",
+        "out_id": 6,
+        "row": 33,
+        "type": "door"
+      }],
+      "north": [{
+        "col": 21,
+        "desc": "Trapped and Stuck Stone Door (DC 20 to break; 60 hp)",
+        "out_id": 5,
+        "row": 26,
+        "trap": "Teleporter Crystal: DC 10 to find, DC 15 to disable;\n    affects each creature which touches the crystal, DC 11 save or be teleported to another location",
+        "type": "trapped"
+      }],
+      "south": [{
+        "col": 21,
+        "desc": "Unlocked Good Wooden Door (15 hp)",
+        "row": 34,
+        "type": "door"
+      }]
+    },
+    "east": 27,
+    "height": 70,
+    "id": 16,
+    "north": 27,
+    "row": 27,
+    "shape": "square",
+    "size": "medium",
+    "south": 33,
+    "west": 21,
+    "width": 70
+  }, {
+    "area": 3500,
+    "col": 1,
+    "contents": {
+      "detail": {
+        "room_features": "The floor is covered in square tiles, alternating white and black, and a pile of torches lies in the center of the room"
+      },
+      "summary": "Empty"
+    },
+    "doors": {
+      "east": [{
+        "col": 8,
+        "desc": "Trapped and Stuck Strong Wooden Door (DC 15 to break; 20 hp)",
+        "out_id": 9,
+        "row": 7,
+        "trap": "Acid Spray: DC 20 to find, DC 15 to disable;\n    affects all targets within a 20 ft. cone, DC 18 save or take 2d10 acid damage\n    for 1d4 rounds",
+        "type": "trapped"
+      }],
+      "south": [{
+        "col": 7,
+        "desc": "Unlocked Simple Wooden Door (10 hp)",
+        "row": 12,
+        "type": "door"
+      }, {
+        "col": 3,
+        "desc": "Unlocked Simple Wooden Door (10 hp)",
+        "row": 12,
+        "type": "door"
+      }]
+    },
+    "east": 7,
+    "height": 50,
+    "id": 17,
+    "north": 7,
+    "row": 7,
+    "shape": "square",
+    "size": "medium",
+    "south": 11,
+    "west": 1,
+    "width": 70
+  }, {
+    "area": 4900,
+    "col": 3,
+    "contents": {
+      "detail": {
+        "monster": ["Silver Dragon Wyrmling (cr 2, mm 118); deadly, 450 xp", "--", "Treasure: 18 sp"],
+        "room_features": "Someone has scrawled \"The Night Walker cannot be slain until song becomes silence\" on the south wall, and wisps of red flame fill the north-west corner of the room"
+      },
+      "inhabited": "Silver Dragon Wyrmling",
+      "summary": "Silver Dragon Wyrmling"
+    },
+    "doors": {
+      "east": [{
+        "col": 10,
+        "desc": "Wooden Portcullis (lift DC 20, DC 15 to break; 30 hp)",
+        "row": 19,
+        "type": "portcullis"
+      }],
+      "north": [{
+        "col": 5,
+        "desc": "Stuck Strong Wooden Door (DC 15 to break; 20 hp) (slides down)",
+        "row": 14,
+        "type": "door"
+      }],
+      "south": [{
+        "col": 5,
+        "desc": "Unlocked Good Wooden Door (15 hp)",
+        "out_id": 8,
+        "row": 22,
+        "type": "door"
+      }, {
+        "col": 7,
+        "desc": "Locked Simple Wooden Door (DC 10 to open, DC 15 to break; 10 hp)",
+        "out_id": 20,
+        "row": 22,
+        "type": "locked"
+      }]
+    },
+    "east": 9,
+    "height": 70,
+    "id": 18,
+    "north": 15,
+    "polygon": 7,
+    "row": 15,
+    "shape": "polygon",
+    "size": "medium",
+    "south": 21,
+    "west": 3,
+    "width": 70
+  }, {
+    "area": 1500,
+    "col": 15,
+    "contents": {
+      "detail": {
+        "monster": ["Ogre Zombie (cr 2, mm 316) and 1 x Zombie (cr 1/4, mm 316); deadly, 500 xp", "--", "Treasure: 9 ep; 13 sp"],
+        "room_features": "A stone dais sits in the east side of the room, and a sundered helm lies in the south-east corner of the room"
+      },
+      "inhabited": "Ogre Zombie and 1 x Zombie",
+      "summary": "Ogre Zombie and 1 x Zombie"
+    },
+    "doors": {
+      "east": [{
+        "col": 18,
+        "desc": "Archway",
+        "out_id": 5,
+        "row": 23,
+        "type": "arch"
+      }],
+      "north": [{
+        "col": 15,
+        "desc": "Stuck Simple Wooden Door (DC 10 to break; 10 hp)",
+        "out_id": 3,
+        "row": 18,
+        "type": "door"
+      }]
+    },
+    "east": 17,
+    "height": 50,
+    "id": 19,
+    "north": 19,
+    "row": 19,
+    "shape": "square",
+    "size": "medium",
+    "south": 23,
+    "west": 15,
+    "width": 30
+  }, {
+    "area": 2100,
+    "col": 7,
+    "contents": {
+      "detail": {
+        "monster": ["Mimic (cr 2, mm 220); deadly, 450 xp", "--", "Treasure: 18 sp"]
+      },
+      "inhabited": "Mimic",
+      "summary": "Mimic"
+    },
+    "doors": {
+      "east": [{
+        "col": 14,
+        "desc": "Stuck Strong Wooden Door (DC 15 to break; 20 hp)",
+        "row": 25,
+        "type": "door"
+      }],
+      "north": [{
+        "col": 7,
+        "desc": "Locked Simple Wooden Door (DC 10 to open, DC 15 to break; 10 hp)",
+        "out_id": 18,
+        "row": 22,
+        "type": "locked"
+      }, {
+        "col": 11,
+        "desc": "Iron Portcullis (DC 20 to lift, DC 25 to break; 60 hp)",
+        "row": 22,
+        "type": "portcullis"
+      }],
+      "west": [{
+        "col": 6,
+        "desc": "Archway",
+        "out_id": 8,
+        "row": 25,
+        "type": "arch"
+      }]
+    },
+    "east": 13,
+    "height": 30,
+    "id": 20,
+    "north": 23,
+    "row": 23,
+    "shape": "square",
+    "size": "medium",
+    "south": 25,
+    "west": 7,
+    "width": 70
+  }, {
+    "area": 900,
+    "col": 15,
+    "contents": {
+      "detail": {
+        "room_features": "A faded and torn tapestry hangs from the west wall, and an iron chain hangs from the ceiling in the north side of the room"
+      },
+      "summary": "Empty"
+    },
+    "doors": {
+      "east": [{
+        "col": 18,
+        "desc": "Wooden Portcullis (lift DC 20, DC 15 to break; 30 hp)",
+        "out_id": 2,
+        "row": 3,
+        "type": "portcullis"
+      }],
+      "south": [{
+        "col": 15,
+        "desc": "Secret (DC 20 to find) Stuck Strong Wooden Door (DC 15 to break; 20 hp)",
+        "out_id": 25,
+        "row": 4,
+        "secret": "The door is concealed within the mouth of a gargantuan skull carved from stone",
+        "type": "secret"
+      }]
+    },
+    "east": 17,
+    "height": 30,
+    "id": 21,
+    "north": 1,
+    "polygon": 6,
+    "row": 1,
+    "shape": "square",
+    "size": "medium",
+    "south": 3,
+    "west": 15,
+    "width": 30
+  }, {
+    "area": 900,
+    "col": 29,
+    "contents": {
+      "summary": "Empty"
+    },
+    "doors": {
+      "south": [{
+        "col": 29,
+        "desc": "Archway",
+        "row": 8,
+        "type": "arch"
+      }]
+    },
+    "east": 31,
+    "height": 30,
+    "id": 22,
+    "north": 5,
+    "row": 5,
+    "shape": "square",
+    "size": "medium",
+    "south": 7,
+    "west": 29,
+    "width": 30
+  }, {
+    "area": 2500,
+    "col": 27,
+    "contents": {
+      "detail": {
+        "room_features": "A stair ascends to a balcony hanging from the east wall, and a pile of rotten bread lies in the west side of the room"
+      },
+      "summary": "Empty"
+    },
+    "doors": {
+      "east": [{
+        "col": 32,
+        "desc": "Secret (DC 25 to find) Stuck Simple Wooden Door (DC 10 to break; 10 hp)",
+        "row": 21,
+        "secret": "A bookcase and concealed door pivots smoothly",
+        "type": "secret"
+      }],
+      "north": [{
+        "col": 31,
+        "desc": "Trapped and Stuck Stone Door (DC 20 to break; 60 hp)",
+        "out_id": 4,
+        "row": 18,
+        "trap": "One-way Door: DC 15 to find, DC 10 to disable",
+        "type": "trapped"
+      }],
+      "south": [{
+        "col": 29,
+        "desc": "Trapped and Stuck Strong Wooden Door (DC 15 to break; 20 hp)",
+        "row": 24,
+        "trap": "Electrified Lock: DC 10 to find, DC 15 to disable;\n    affects each creature which touches the lock, DC 10 save or take 1d10 lightning damage",
+        "type": "trapped"
+      }]
+    },
+    "east": 31,
+    "height": 50,
+    "id": 23,
+    "north": 19,
+    "polygon": 5,
+    "row": 19,
+    "shape": "polygon",
+    "size": "medium",
+    "south": 23,
+    "west": 27,
+    "width": 50
+  }, {
+    "area": 1500,
+    "col": 29,
+    "contents": {
+      "detail": {
+        "monster": ["Silver Dragon Wyrmling (cr 2, mm 118); deadly, 450 xp", "--", "Treasure: 14 cp"],
+        "room_features": "A magical idol of a god of dwarves in the west side of the room conjures a tankard of ale for whomever offers a prayer, and the floor is covered in square tiles, alternating white and black"
+      },
+      "inhabited": "Silver Dragon Wyrmling",
+      "summary": "Silver Dragon Wyrmling"
+    },
+    "doors": {
+      "east": [{
+        "col": 32,
+        "desc": "Secret (DC 15 to find) Stuck Strong Wooden Door (DC 15 to break; 20 hp)",
+        "row": 43,
+        "secret": "A bookcase and concealed door pivots smoothly",
+        "type": "secret"
+      }, {
+        "col": 32,
+        "desc": "Stuck Good Wooden Door (DC 15 to break; 15 hp)",
+        "row": 39,
+        "type": "door"
+      }],
+      "west": [{
+        "col": 28,
+        "desc": "Trapped and Stuck Simple Wooden Door (DC 10 to break; 10 hp)",
+        "out_id": 11,
+        "row": 39,
+        "trap": "Ice Dart Trap: DC 10 to find, DC 15 to disable;\n    +7 to hit against one target, 2d10 cold damage",
+        "type": "trapped"
+      }]
+    },
+    "east": 31,
+    "height": 50,
+    "id": 24,
+    "north": 39,
+    "row": 39,
+    "shape": "square",
+    "size": "medium",
+    "south": 43,
+    "west": 29,
+    "width": 30
+  }, {
+    "area": 1500,
+    "col": 13,
+    "contents": {
+      "detail": {
+        "monster": ["Mimic (cr 2, mm 220); deadly, 450 xp", "--", "Treasure: 13 cp"],
+        "room_features": "The floor is covered with mud, and several iron blobs are scattered throughout the room"
+      },
+      "inhabited": "Mimic",
+      "summary": "Mimic"
+    },
+    "doors": {
+      "north": [{
+        "col": 15,
+        "desc": "Secret (DC 20 to find) Stuck Strong Wooden Door (DC 15 to break; 20 hp)",
+        "out_id": 21,
+        "row": 4,
+        "secret": "The door is concealed within the mouth of a gargantuan skull carved from stone",
+        "type": "secret"
+      }]
+    },
+    "east": 17,
+    "height": 30,
+    "id": 25,
+    "north": 5,
+    "row": 5,
+    "shape": "square",
+    "size": "medium",
+    "south": 7,
+    "west": 13,
+    "width": 50
+  }],
+  "settings": {
+    "add_stairs": "Yes",
+    "bleed": 4,
+    "cell_size": 18,
+    "corridor_layout": "Errant",
+    "door_set": "Standard",
+    "dungeon_layout": "Rectangle",
+    "dungeon_size": "Tiny",
+    "grid": "Square",
+    "image_size": "",
+    "infest": "dnd_5e",
+    "last_room_id": 25,
+    "level": 1,
+    "map_cols": "51",
+    "map_rows": "65",
+    "map_style": "Standard",
+    "max_col": 34,
+    "max_row": 44,
+    "motif": "",
+    "n_cols": 35,
+    "n_i": 22,
+    "n_j": 17,
+    "n_pc": 4,
+    "n_rooms": 25,
+    "n_rows": 45,
+    "name": "The Dark Vaults of Emirkol the Chaotic",
+    "peripheral_egress": "Tiling",
+    "remove_arcs": "Some",
+    "remove_deadends": "Some",
+    "room_layout": "Scattered",
+    "room_polymorph": "Yes",
+    "room_size": "Medium",
+    "seed": 1669074860
+  },
+  "stairs": [{
+    "col": 27,
+    "dir": "east",
+    "key": "down",
+    "row": 25
+  }, {
+    "col": 15,
+    "dir": "west",
+    "key": "up",
+    "row": 37
+  }],
+  "wandering_monsters": {
+    "1": "Mimic (cr 2, mm 220); deadly, 450 xp, consumed by disease and madness",
+    "2": "Bugbear (cr 1, mm 33); medium, 200 xp, wandering senselessly",
+    "3": "Orog (cr 2, mm 247); deadly, 450 xp, consumed by disease and madness",
+    "4": "Orc (cr 1/2, mm 246) and 1 x Half-ogre (cr 1, mm 238); deadly, 300 xp, wielding bizarre eldritch powers",
+    "5": "Silver Dragon Wyrmling (cr 2, mm 118); deadly, 450 xp, investigating a strange noise",
+    "6": "Gelatinous Cube (cr 2, mm 242); deadly, 450 xp, lost and desperate"
+  }
+}
