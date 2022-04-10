@@ -1,44 +1,30 @@
 class_name Cell
 
-var map_x: int
-var map_y: int
-var map_z: int
+var position: Vector3
+var rotation: float
 
-enum Vision {
+enum Status {
 	UNKNOWN,
 	EXPLORED,
 	REVEALED,
 }
 
-var vision: int
+var status: int
 var light: Color
 
-var state: State setget set_state, get_state
-var _cached_state: State
-var _real_state: State
+var state: CellState setget set_state, get_state
+var real_state: CellState
 
 
-class State:
-	var empty: bool = true
-	var walkable: bool
-	var tranparent: bool
-	var top: Vector2
-	var south: Vector2
-	var north: Vector2
-	var west: Vector2
-	var est: Vector2
-	var bottom: Vector2
+func set_state(new_state: CellState):
+	real_state = new_state
 
 
-func set_state(state: State):
-	_real_state = state
-
-
-func get_state() -> State:
-	if vision == Vision.REVEALED:
-		_cached_state = _real_state
-		return _real_state
-	elif vision == Vision.EXPLORED:
-		return _cached_state
+func get_state() -> CellState:
+	if status == Status.REVEALED:
+		state = real_state
+		return real_state
+	elif status == Status.EXPLORED:
+		return state
 	else:
-		return State.new()
+		return null

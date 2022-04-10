@@ -1,15 +1,15 @@
 extends Spatial
 
-export var init_x: float = 5
-export var init_z: float = 5
+export var init_x: float = 20
+export var init_z: float = 20
 export var init_rot_x: float = -45
 export var init_rot_y: float = 0
-export var init_zoom: float = 10
+export var init_zoom: float = 5
 
 export var move_speed: float = 0.1
 export var rot_x_speed: float = 0.5
 export var rot_y_speed: float = 0.5
-export var zoom_step: float = 1
+export var zoom_step: float = 0.25
 export var zoom_speed: float = 10
 
 var min_x: float = 0
@@ -20,7 +20,7 @@ var min_rot_x: float = -90
 var max_rot_x: float = 90
 var zoom: float = 1
 var min_zoom: float = 1
-var max_zoom: float = 100
+var max_zoom: float = 10
 
 var is_action: bool
 var is_move: bool
@@ -33,7 +33,7 @@ func _ready():
 	transform.origin = Vector3(init_x, 0, init_z)
 	rotation_degrees.x = clamp(init_rot_x, min_rot_x, max_rot_x)
 	rotation_degrees.y = init_rot_y
-	$Camera.transform.origin.z = clamp(init_zoom, min_zoom, max_zoom)
+	zoom = clamp(init_zoom, min_zoom, max_zoom)
 
 
 func _process(delta):

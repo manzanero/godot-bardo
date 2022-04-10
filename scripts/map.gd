@@ -1,53 +1,42 @@
-class_name Map extends Spatial
+class_name Map
+extends Spatial
 
 
-var min_x
-var max_x
-var min_y
-var max_y
-var min_z
-var max_z
+var from: Vector3
+var to: Vector3
+
 
 var chunks: Dictionary
+var cells: Dictionary
 
 
-func get_len_x(): return max_x - min_x
-func get_len_y(): return max_x - min_x
-func get_len_z(): return max_z - min_z
+func get_len_x(): return to.x - from.x
+func get_len_y(): return to.y - from.y
+func get_len_z(): return to.z - from.z
 
 
 func _init():
 	chunks = {}
+	cells = {}
 
 
-func get_cell(x: int, y: int, z: int):
-	var chunk_x
-	var chunk_z
-	var chunk_cell_x
-	var chunk_cell_z
-
-	if x >= 0:
-		chunk_x = x / 16
-		chunk_cell_x = x % 16
-	else:
-		chunk_x = x / 16 - 1
-		chunk_cell_x = 16 - x % 16
-
-	if z >= 0:
-		chunk_z = z / 16
-		chunk_cell_z = z % 16
-	else:
-		chunk_z = z / 16 - 1
-		chunk_cell_z = 16 - z % 16
-
-	var chunk = chunks.get(Vector3(chunk_x, y, chunk_z))
-	return chunk.cells[chunk_cell_z][chunk_cell_x] if chunk else null
+func init_cells(init_from: Vector3, init_to: Vector3):
+	for x in range(init_from.x, init_to.x):
+		for y in range(init_from.y, init_to.y):
+			for z in range(init_from.z, init_to.z):
+				var cell = Cell.new()
+				cell.position = Vector3(x, y, z)
+				cells[cell.position] = cell
 
 
-func get_relative_cell(cell: Cell, x: int, y: int, z: int) -> Cell:
-	return get_cell(cell.map_x + x, cell.map_y + y, cell.map_z + z)
+func get_cell(position: Vector3):
+	return cells.get(position)
 
 
-func get_relative_cell_state(cell: Cell, x: int, y: int, z: int) -> Cell.State:
-	var relative_cell = get_relative_cell(cell, x, y, z)
+func get_relative_cell(cell, offset: Vector3):
+	return get_cell(cell.position + offset)
+
+
+func get_relative_cell_state(cell, offset: Vector3):
+	var relative_cell = get_relative_cell(cell, offset)
 	return relative_cell.state if relative_cell else null

@@ -1,12 +1,10 @@
-class_name Chunk 
+class_name Chunk
 extends Spatial
 
 var dirty: bool
+
 var map: Map
-var init_x: int
-var y: int
-var init_z: int
-var cells: Array
+var position: Vector3
 
 var verts: PoolVector3Array
 var uvs: PoolVector2Array
@@ -18,19 +16,16 @@ var unit_uv_x: float = 0.25
 var unit_uv_y: float = 0.25
 
 
+func chunk_to_map(chunk_cell: Vector3):
+	return Vector3(
+		position.x * 16 + chunk_cell.x,
+		position.y + chunk_cell.y,
+		position.z * 16 + chunk_cell.z
+	)
+
+
 func _ready():
 	dirty = true
-	cells = []
-
-	for z in range(16):
-		cells.append([])
-
-		for x in range(16):
-			var cell = Cell.new()
-			cell.map_x = init_x + x
-			cell.map_y = y
-			cell.map_z = init_z + z
-			cells[z].append(cell)
 
 
 func _process(_delta):
@@ -51,7 +46,7 @@ func refresh_mesh():
 
 	for z in range(16):
 		for x in range(16):
-			refresh_cell_mesh(z, x)
+			refresh_cell_mesh(Vector3(x, 0, z))
 
 	var arr = []
 	arr.resize(Mesh.ARRAY_MAX)
@@ -65,114 +60,50 @@ func refresh_mesh():
 	$MeshInstance.mesh.surface_set_material(0, atlas_material)
 
 
-func refresh_cell_mesh(z: int, x: int):
-	var cell: Cell = cells[z][x]
-	var state: Cell.State = cell.state
+func refresh_cell_mesh(offset):
+	var cell: Cell = map.get_cell(chunk_to_map(offset))
+	var state: CellState = cell.state
 
 	if not state.empty:
-		var offset = Vector3(x, 0, z)
-		var vertices_sequence = [0, 1, 2, 2, 1, 3]
-		var indices_offset = verts.size()
 
-		for vert in TOP:
-			verts.append(offset + vert)
+		var up_state: CellState = map.get_relative_cell_state(cell, Vector3.UP)
+		var forward_state: CellState = map.get_relative_cell_state(cell, Vector3.FORWARD)
+		var back_state: CellState = map.get_relative_cell_state(cell, Vector3.BACK)
+		var left_state: CellState = map.get_relative_cell_state(cell, Vector3.LEFT)
+		var right_state: CellState = map.get_relative_cell_state(cell, Vector3.RIGHT)
+		var down_state: CellState = map.get_relative_cell_state(cell, Vector3.DOWN)
 
-		for uv_point in get_uv_points(state.top):
-			uvs.append(uv_point)
+		if not up_state or up_state.empty:
+			draw_face(offset, FACE_UP, Vector3.UP, state.uvs.up)
 
-		for _normal in range(4):
-			normals.append(Vector3.UP)
+		if not forward_state or forward_state.empty:
+			draw_face(offset, FACE_FORWARD, Vector3.FORWARD, state.uvs.forward)
 
-		for vertice in vertices_sequence:
-			indices.append(indices_offset + vertice)
+		if not back_state or back_state.empty:
+			draw_face(offset, FACE_BACK, Vector3.BACK, state.uvs.back)
 
-		indices_offset += 4;
+		if not left_state or left_state.empty:
+			draw_face(offset, FACE_LEFT, Vector3.LEFT, state.uvs.left)
 
-		var south_cell = map.get_relative_cell_state(cell, 0, 0, 1)
-		if not south_cell or south_cell.empty:
-			for vert in SOUTH:
-				verts.append(offset + vert)
+		if not right_state or right_state.empty:
+			draw_face(offset, FACE_RIGHT, Vector3.RIGHT, state.uvs.right)
 
-			for uv_point in get_uv_points(state.south):
-				uvs.append(uv_point)
-
-			for _normal in range(4):
-				normals.append(Vector3.FORWARD)
-
-			for vertice in vertices_sequence:
-				indices.append(indices_offset + vertice)
-
-			indices_offset += 4;
-
-		var north_cell = map.get_relative_cell_state(cell, 0, 0, -1)
-		if not north_cell or north_cell.empty:
-			for vert in NORTH:
-				verts.append(offset + vert)
-
-			for uv_point in get_uv_points(state.north):
-				uvs.append(uv_point)
-
-			for _normal in range(4):
-				normals.append(Vector3.BACK)
-
-			for vertice in vertices_sequence:
-				indices.append(indices_offset + vertice)
-
-			indices_offset += 4;
-
-		var west_cell = map.get_relative_cell_state(cell, -1, 0, 0)
-		if not west_cell or west_cell.empty:
-			for vert in WEST:
-				verts.append(offset + vert)
-
-			for uv_point in get_uv_points(state.west):
-				uvs.append(uv_point)
-
-			for _normal in range(4):
-				normals.append(Vector3.LEFT)
-
-			for vertice in vertices_sequence:
-				indices.append(indices_offset + vertice)
-
-			indices_offset += 4;
-
-		var est_cell = map.get_relative_cell_state(cell, 1, 0, 0)
-		if not est_cell or est_cell.empty:
-			for vert in EST:
-				verts.append(offset + vert)
-
-			for uv_point in get_uv_points(state.est):
-				uvs.append(uv_point)
-
-			for _normal in range(4):
-				normals.append(Vector3.RIGHT)
-
-			for vertice in vertices_sequence:
-				indices.append(indices_offset + vertice)
-
-			indices_offset += 4;
-
-		var bottom_cell = map.get_relative_cell_state(cell, 0, -1, 0)
-		if not bottom_cell or bottom_cell.empty:
-			for vert in BOTTOM:
-				verts.append(offset + vert)
-
-			for uv_point in get_uv_points(state.bottom):
-				uvs.append(uv_point)
-
-			for _normal in range(4):
-				normals.append(Vector3.DOWN)
-
-			for vertice in vertices_sequence:
-				indices.append(indices_offset + vertice)
+		if not down_state or down_state.empty:
+			draw_face(offset, FACE_DOWN, Vector3.DOWN, state.uvs.down)
 
 
-var TOP = [Vector3(0, 1, 1), Vector3(0, 1, 0), Vector3(1, 1, 1), Vector3(1, 1, 0)]
-var SOUTH = [Vector3(0, 0, 1), Vector3(0, 1, 1), Vector3(1, 0, 1), Vector3(1, 1, 1)]
-var NORTH = [Vector3(1, 0, 0), Vector3(1, 1, 0), Vector3(0, 0, 0), Vector3(0, 1, 0)]
-var WEST = [Vector3(0, 0, 0), Vector3(0, 1, 0), Vector3(0, 0, 1), Vector3(0, 1, 1)]
-var EST = [Vector3(1, 0, 1), Vector3(1, 1, 1), Vector3(1, 0, 0), Vector3(1, 1, 0)]
-var BOTTOM = [Vector3(0, 0, 0), Vector3(0, 0, 1), Vector3(1, 0, 0), Vector3(1, 0, 1)]
+func draw_face(offset, face_verts, face_normal, uv_frame):
+	var indices_offset = verts.size()
+
+	for vert in face_verts:
+		verts.append(offset + vert)
+		normals.append(face_normal)
+
+	for uv_point in get_uv_points(uv_frame):
+		uvs.append(uv_point)
+
+	for vertice in FACE_SEQUENCE:
+		indices.append(indices_offset + vertice)
 
 
 func get_uv_points(frame: Vector2):
@@ -185,3 +116,12 @@ func get_uv_points(frame: Vector2):
 		Vector2(init_uv_x + unit_uv_x, init_uv_y),
 		Vector2(init_uv_x + unit_uv_x, init_uv_y + unit_uv_y)
 	]
+
+
+var FACE_SEQUENCE = [0, 1, 2, 2, 1, 3]
+var FACE_UP = [Vector3(0, 1, 1), Vector3(0, 1, 0), Vector3(1, 1, 1), Vector3(1, 1, 0)]
+var FACE_FORWARD = [Vector3(1, 0, 0), Vector3(1, 1, 0), Vector3(0, 0, 0), Vector3(0, 1, 0)]
+var FACE_BACK = [Vector3(0, 0, 1), Vector3(0, 1, 1), Vector3(1, 0, 1), Vector3(1, 1, 1)]
+var FACE_LEFT = [Vector3(0, 0, 0), Vector3(0, 1, 0), Vector3(0, 0, 1), Vector3(0, 1, 1)]
+var FACE_RIGHT = [Vector3(1, 0, 1), Vector3(1, 1, 1), Vector3(1, 0, 0), Vector3(1, 1, 0)]
+var FACE_DOWN = [Vector3(0, 0, 0), Vector3(0, 0, 1), Vector3(1, 0, 0), Vector3(1, 0, 1)]
