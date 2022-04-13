@@ -20,6 +20,11 @@ _global_script_classes=[ {
 "path": "res://scripts/cell.gd"
 }, {
 "base": "Reference",
+"class": "CellFace",
+"language": "GDScript",
+"path": "res://scripts/cell_face.gd"
+}, {
+"base": "Reference",
 "class": "CellState",
 "language": "GDScript",
 "path": "res://scripts/cell_state.gd"
@@ -29,23 +34,46 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://scripts/chunk.gd"
 }, {
+"base": "PanelContainer",
+"class": "JsonDock",
+"language": "GDScript",
+"path": "res://addons/json_editor/json_dock.gd"
+}, {
+"base": "Reference",
+"class": "MRPAS",
+"language": "GDScript",
+"path": "res://addons/mrpas/mrpas.gd"
+}, {
 "base": "Spatial",
 "class": "Map",
 "language": "GDScript",
 "path": "res://scripts/map.gd"
+}, {
+"base": "Node",
+"class": "MapMRPAS",
+"language": "GDScript",
+"path": "res://scripts/campaign/map_mrpas.gd"
 } ]
 _global_script_class_icons={
 "Campaign": "",
 "Cell": "",
+"CellFace": "",
 "CellState": "",
 "Chunk": "",
-"Map": ""
+"JsonDock": "",
+"MRPAS": "",
+"Map": "",
+"MapMRPAS": ""
 }
 
 [application]
 
 config/name="Bardo"
 run/main_scene="res://scenes/main.tscn"
+
+[display]
+
+window/vsync/use_vsync=false
 
 [input]
 

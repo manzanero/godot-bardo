@@ -1,9 +1,10 @@
 class_name Chunk
 extends Spatial
 
-var dirty: bool
+var face = CellFace.new()
 
-var map: Map
+var dirty: bool
+var map
 var position: Vector3
 
 var verts: PoolVector3Array
@@ -22,6 +23,22 @@ func chunk_to_map(chunk_cell: Vector3):
 		position.y + chunk_cell.y,
 		position.z * 16 + chunk_cell.z
 	)
+
+
+func init(_map, _position: Vector3):
+	map = _map
+	position = _position
+	var map_position = chunk_to_map(Vector3.ZERO)
+	translate(map_position)
+	name = "Chunk__%s" % position
+	map.get_node("Chunks").add_child(self)
+
+	for z in range(16):
+		for x in range(16):
+			var cell = Cell.new(self, Vector3(map_position.x + x, position.y, map_position.z + z))
+			map.cells[cell.position] = cell
+
+	return self
 
 
 func _ready():
@@ -61,10 +78,11 @@ func refresh_mesh():
 
 
 func refresh_cell_mesh(offset):
-	var cell: Cell = map.get_cell(chunk_to_map(offset))
+	var map_position: Vector3 = chunk_to_map(offset)
+	var cell = map.get_cell(map_position)
 	var state: CellState = cell.state
 
-	if not state.empty:
+	if state and not state.empty:
 
 		var up_state: CellState = map.get_relative_cell_state(cell, Vector3.UP)
 		var forward_state: CellState = map.get_relative_cell_state(cell, Vector3.FORWARD)
@@ -74,22 +92,22 @@ func refresh_cell_mesh(offset):
 		var down_state: CellState = map.get_relative_cell_state(cell, Vector3.DOWN)
 
 		if not up_state or up_state.empty:
-			draw_face(offset, FACE_UP, Vector3.UP, state.uvs.up)
+			draw_face(offset, face.UP, Vector3.UP, state.uvs.up)
 
 		if not forward_state or forward_state.empty:
-			draw_face(offset, FACE_FORWARD, Vector3.FORWARD, state.uvs.forward)
+			draw_face(offset, face.FORWARD, Vector3.FORWARD, state.uvs.forward)
 
 		if not back_state or back_state.empty:
-			draw_face(offset, FACE_BACK, Vector3.BACK, state.uvs.back)
+			draw_face(offset, face.BACK, Vector3.BACK, state.uvs.back)
 
 		if not left_state or left_state.empty:
-			draw_face(offset, FACE_LEFT, Vector3.LEFT, state.uvs.left)
+			draw_face(offset, face.LEFT, Vector3.LEFT, state.uvs.left)
 
 		if not right_state or right_state.empty:
-			draw_face(offset, FACE_RIGHT, Vector3.RIGHT, state.uvs.right)
+			draw_face(offset, face.RIGHT, Vector3.RIGHT, state.uvs.right)
 
 		if not down_state or down_state.empty:
-			draw_face(offset, FACE_DOWN, Vector3.DOWN, state.uvs.down)
+			draw_face(offset, face.DOWN, Vector3.DOWN, state.uvs.down)
 
 
 func draw_face(offset, face_verts, face_normal, uv_frame):
@@ -102,7 +120,7 @@ func draw_face(offset, face_verts, face_normal, uv_frame):
 	for uv_point in get_uv_points(uv_frame):
 		uvs.append(uv_point)
 
-	for vertice in FACE_SEQUENCE:
+	for vertice in face.SEQUENCE:
 		indices.append(indices_offset + vertice)
 
 
@@ -116,12 +134,3 @@ func get_uv_points(frame: Vector2):
 		Vector2(init_uv_x + unit_uv_x, init_uv_y),
 		Vector2(init_uv_x + unit_uv_x, init_uv_y + unit_uv_y)
 	]
-
-
-var FACE_SEQUENCE = [0, 1, 2, 2, 1, 3]
-var FACE_UP = [Vector3(0, 1, 1), Vector3(0, 1, 0), Vector3(1, 1, 1), Vector3(1, 1, 0)]
-var FACE_FORWARD = [Vector3(1, 0, 0), Vector3(1, 1, 0), Vector3(0, 0, 0), Vector3(0, 1, 0)]
-var FACE_BACK = [Vector3(0, 0, 1), Vector3(0, 1, 1), Vector3(1, 0, 1), Vector3(1, 1, 1)]
-var FACE_LEFT = [Vector3(0, 0, 0), Vector3(0, 1, 0), Vector3(0, 0, 1), Vector3(0, 1, 1)]
-var FACE_RIGHT = [Vector3(1, 0, 1), Vector3(1, 1, 1), Vector3(1, 0, 0), Vector3(1, 1, 0)]
-var FACE_DOWN = [Vector3(0, 0, 0), Vector3(0, 0, 1), Vector3(1, 0, 0), Vector3(1, 0, 1)]

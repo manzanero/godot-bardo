@@ -1,7 +1,7 @@
 class_name Cell
 
 var position: Vector3
-var rotation: float
+var chunk
 
 enum Status {
 	UNKNOWN,
@@ -26,5 +26,9 @@ func get_state() -> CellState:
 		return real_state
 	elif status == Status.EXPLORED:
 		return state
-	else:
-		return null
+	return null
+
+
+func _init(_chunk, _position: Vector3) -> void:
+	chunk = _chunk
+	position = _position

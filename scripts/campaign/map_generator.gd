@@ -3,8 +3,9 @@ extends Node
 var map_scene = preload("res://scenes/map.tscn")
 var chunk_scene = preload("res://scenes/chunk.tscn")
 
-onready var campaign = get_node("/root/Main/Campaign")
-onready var maps_parent = get_node("/root/Main/Campaign/Maps")
+onready var campaign = get_node("..")
+onready var maps_parent = get_node("../Maps")
+onready var maps_mrpas = get_node("../MapMRPAS")
 
 
 func create_scene_from_donjon(map_text):
@@ -17,115 +18,69 @@ func create_scene_from_donjon(map_text):
 	var cells_data = map_data["cells"]
 	var len_x = 2 * cells_data[0].size()
 	var len_z = 2 * cells_data.size()
-	var len_chunk_x = len_x / 16 + 1
-	var len_chunk_z = len_z / 16 + 1
+	var chunk_len_x = len_x / 16 + 1
+	var chunk_len_y = 3
+	var chunk_len_z = len_z / 16 + 1
+	var map_len_x = chunk_len_x * 16
+	var map_len_y = chunk_len_y
+	var map_len_z = chunk_len_z * 16
 
 	var map = map_scene.instance()
 	map.name = map_data["settings"]["name"]
-	map.init_cells(Vector3(0, -1, 0), Vector3(len_chunk_x * 16, 2, len_chunk_z * 16))
 	maps_parent.add_child(map)
+	maps_mrpas.init(Vector3.ZERO, Vector3(map_len_x, map_len_y, map_len_z))
 
-	var chunks_parent = map.get_node("Chunks")
-	var chunks = map.chunks
+	for chunk_x in range(chunk_len_x):
+		for chunk_y in range(chunk_len_y):
+			for chunk_z in range(chunk_len_z):
+				chunk_scene.instance().init(map, Vector3(chunk_x, chunk_y, chunk_z))
 
-	for chunk_z in range(len_chunk_z):
-		for chunk_x in range(len_chunk_x):
-			var chunk: Chunk
+	for z in range(map_len_z):
+		for x in range(map_len_x):
+			var cell: Cell = map.get_cell(Vector3(x, 0, z))
 
-			var base_y = -1
-			chunk = chunk_scene.instance()
-			chunk.position = Vector3(chunk_x, base_y, chunk_z)
-			chunk.translate(chunk.chunk_to_map(Vector3.ZERO))
-			chunk.name = "Chunk__{x}_{y}_{z}".format({"x": chunk_x, "y": base_y, "z": chunk_z})
-			chunk.map = map
-			chunks_parent.add_child(chunk)
-			chunks[chunk.position] = chunk
+#			cell.status = Cell.Status.REVEALED
 
-			for z in range(16):
-				for x in range(16):
-					var cell: Cell = map.get_cell(chunk.chunk_to_map(Vector3(x, 0, z)))
+			var state = CellState.new()
+			state.empty = false
+			state.walkable = false
+			state.tranparent = false
+			state.uvs.up = Vector2(0, 0)
+			state.uvs.forward = Vector2(0, 1)
+			state.uvs.back = Vector2(0, 1)
+			state.uvs.left = Vector2(0, 1)
+			state.uvs.right = Vector2(0, 1)
+			state.uvs.down = Vector2(0, 2)
 
-					cell.status = Cell.Status.REVEALED
+			cell.state = state
 
-					var state = CellState.new()
+	for y in [1, 2]:
+		for z in range(map_len_z):
+			for x in range(map_len_x):
+				var cell: Cell = map.get_cell(Vector3(x, y, z))
+
+				var map_x = clamp(x, 0, len_x - 1)
+				var map_z = clamp(z, 0, len_z - 1)
+				var cell_code = cells_data[map_z / 2][map_x / 2]
+				var cell_is_wall = cell_code in [0, 16]
+
+#				cell.status = Cell.Status.REVEALED
+
+				var state = CellState.new()
+				if cell_is_wall:
 					state.empty = false
-					state.walkable = false
-					state.tranparent = false
-					state.uvs.up = Vector2(0, 0)
+					state.uvs.up = Vector2(0, 2)
 					state.uvs.forward = Vector2(0, 1)
 					state.uvs.back = Vector2(0, 1)
 					state.uvs.left = Vector2(0, 1)
 					state.uvs.right = Vector2(0, 1)
 					state.uvs.down = Vector2(0, 2)
 
-					cell.state = state
+					maps_mrpas.set_transparent(Vector3(x, y, z), false)
 
-			for y in range(2):
-				chunk = chunk_scene.instance()
-				chunk.position = Vector3(chunk_x, y, chunk_z)
-				chunk.translate(chunk.chunk_to_map(Vector3.ZERO))
-				chunk.name = "Chunk__{x}_{y}_{z}".format({"x": chunk_x, "y": y, "z": chunk_z})
-				chunk.map = map
-				chunks_parent.add_child(chunk)
-				chunks[chunk.position] = chunk
+				else:
+					state.empty = true
+					state.walkable = true
+					state.tranparent = true
 
-				for z in range(16):
-					for x in range(16):
-						var cell: Cell = map.get_cell(chunk.chunk_to_map(Vector3(x, 0, z)))
-						var map_x = clamp(cell.position.x, 0, len_x - 1)
-						var map_z = clamp(cell.position.z, 0, len_z - 1)
-						var cell_code = cells_data[map_z / 2][map_x / 2]
-						var cell_is_wall = cell_code in [0, 16]
-
-						cell.status = Cell.Status.REVEALED
-
-						var state = CellState.new()
-						if cell_is_wall:
-							state.empty = false
-							state.uvs.up = Vector2(0, 2)
-							state.uvs.forward = Vector2(0, 1)
-							state.uvs.back = Vector2(0, 1)
-							state.uvs.left = Vector2(0, 1)
-							state.uvs.right = Vector2(0, 1)
-							state.uvs.down = Vector2(0, 2)
-						else:
-							state.empty = true
-							state.walkable = true
-							state.tranparent = true
-
-						cell.state = state
-
-#			var top_y = 2
-#			chunk = chunk_scene.instance()
-#			chunk.translate(Vector3(chunk_x * 16, top_y, chunk_z * 16))
-#			chunk.name = "Chunk__{x}_{y}_{z}".format({"x": chunk_x, "y": top_y, "z": chunk_z})
-#			chunk.map = map
-#			chunk.init_x = chunk_x * 16
-#			chunk.y = top_y
-#			chunk.init_z = chunk_z * 16
-#			chunks_parent.add_child(chunk)
-#			chunks[Vector3(chunk_x, top_y, chunk_z)] = chunk
-#
-#			for z in range(16):
-#				for x in range(16):
-#					var cell: Cell = map.get_cell(Vector3(x, top_y, z))
-#
-#
-#					cell.status = Cell.Status.REVEALED
-#
-#					var state = Cell.State.new()
-#					state.empty = false
-#					state.walkable = false
-#					state.tranparent = false
-#					state.uvs.up = Vector2(0, 0)
-#					state.uvs.forward = Vector2(0, 1)
-#					state.uvs.back = Vector2(0, 1)
-#					state.uvs.left = Vector2(0, 1)
-#					state.uvs.right = Vector2(0, 1)
-#					state.uvs.down = Vector2(0, 2)
-#
-#					cell.set_state(state)
-
-
-func create_tilemap_from_donjon(_map_text):
-	pass
+				cell.state = state

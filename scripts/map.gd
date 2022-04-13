@@ -1,42 +1,71 @@
 class_name Map
 extends Spatial
 
-
-var from: Vector3
-var to: Vector3
-
+var min_x: int
+var min_y: int
+var min_z: int
+var max_x: int
+var max_y: int
+var max_z: int
 
 var chunks: Dictionary
 var cells: Dictionary
-
-
-func get_len_x(): return to.x - from.x
-func get_len_y(): return to.y - from.y
-func get_len_z(): return to.z - from.z
+var view: Dictionary
 
 
 func _init():
 	chunks = {}
 	cells = {}
+	view = {}
 
 
-func init_cells(init_from: Vector3, init_to: Vector3):
-	for x in range(init_from.x, init_to.x):
-		for y in range(init_from.y, init_to.y):
-			for z in range(init_from.z, init_to.z):
-				var cell = Cell.new()
-				cell.position = Vector3(x, y, z)
-				cells[cell.position] = cell
-
-
-func get_cell(position: Vector3):
+func get_cell(position: Vector3) -> Cell:
 	return cells.get(position)
 
 
-func get_relative_cell(cell, offset: Vector3):
+func get_relative_cell(cell, offset: Vector3) -> Cell:
 	return get_cell(cell.position + offset)
 
 
-func get_relative_cell_state(cell, offset: Vector3):
+func get_relative_cell_state(cell, offset: Vector3) -> CellState:
 	var relative_cell = get_relative_cell(cell, offset)
 	return relative_cell.state if relative_cell else null
+
+
+var x = Vector3(11, 1, 12)
+var cube = MeshInstance.new()
+
+func _input(event):
+	if event is InputEventKey and event.scancode == KEY_W:
+		x += Vector3.FORWARD
+		cube.transform.origin = x
+	if event is InputEventKey and event.scancode == KEY_S:
+		x += Vector3.BACK
+		cube.transform.origin = x
+	if event is InputEventKey and event.scancode == KEY_A:
+		x += Vector3.LEFT
+		cube.transform.origin = x
+	if event is InputEventKey and event.scancode == KEY_D:
+		x += Vector3.RIGHT
+		cube.transform.origin = x
+
+	if event is InputEventKey and event.scancode == KEY_K and not event.echo:
+		cube.free()
+		cube = MeshInstance.new()
+		cube.mesh = CubeMesh.new()
+		add_child(cube)
+
+	if event is InputEventKey:
+		var fov = get_node("../../MapMRPAS").field_of_view(x)
+
+		for p in fov:
+			var cell = cells[p]
+			cell.status = Cell.Status.REVEALED
+			cell.chunk.dirty = true
+			cell = cells[p + Vector3.DOWN]
+			cell.status = Cell.Status.REVEALED
+			cell.chunk.dirty = true
+#			var cell = cells[p + Vector3.DOWN]
+#			if not cell.status == Cell.Status.REVEALED:
+#				cell.status = Cell.Status.REVEALED
+#				cell.chunk.dirty = true
