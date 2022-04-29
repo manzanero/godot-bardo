@@ -1,0 +1,19 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://scripts/cell/cell_preset.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+empty = true
+walkable = true
+tranparent = true
+uvs = {
+"back": [ Vector2( 0, 0 ) ],
+"down": [ Vector2( 0, 0 ) ],
+"forward": [ Vector2( 0, 0 ) ],
+"left": [ Vector2( 0, 0 ) ],
+"right": [ Vector2( 0, 0 ) ],
+"up": [ Vector2( 0, 0 ) ]
+}
+properties = {
+}

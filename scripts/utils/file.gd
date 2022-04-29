@@ -1,5 +1,5 @@
 
-func read_json(path):
+static func read_json(path):
 	var f = File.new()
 	var err = f.open(path, File.READ)
 	if err != OK:

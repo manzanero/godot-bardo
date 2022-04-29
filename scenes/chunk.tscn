@@ -5,9 +5,7 @@
 
 [sub_resource type="ArrayMesh" id=1]
 
-[node name="Chunk" type="Spatial"]
-script = ExtResource( 1 )
-
-[node name="MeshInstance" type="MeshInstance" parent="."]
+[node name="Chunk" type="MeshInstance"]
 material_override = ExtResource( 2 )
 mesh = SubResource( 1 )
+script = ExtResource( 1 )

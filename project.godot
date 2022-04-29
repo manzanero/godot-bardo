@@ -9,11 +9,6 @@
 config_version=4
 
 _global_script_classes=[ {
-"base": "Spatial",
-"class": "Campaign",
-"language": "GDScript",
-"path": "res://scripts/campaign.gd"
-}, {
 "base": "Reference",
 "class": "Cell",
 "language": "GDScript",
@@ -22,17 +17,17 @@ _global_script_classes=[ {
 "base": "Reference",
 "class": "CellFace",
 "language": "GDScript",
-"path": "res://scripts/cell_face.gd"
+"path": "res://scripts/cell/cell_face.gd"
+}, {
+"base": "Resource",
+"class": "CellPreset",
+"language": "GDScript",
+"path": "res://scripts/cell/cell_preset.gd"
 }, {
 "base": "Reference",
 "class": "CellState",
 "language": "GDScript",
-"path": "res://scripts/cell_state.gd"
-}, {
-"base": "Spatial",
-"class": "Chunk",
-"language": "GDScript",
-"path": "res://scripts/chunk.gd"
+"path": "res://scripts/cell/cell_state.gd"
 }, {
 "base": "PanelContainer",
 "class": "JsonDock",
@@ -44,25 +39,18 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/mrpas/mrpas.gd"
 }, {
-"base": "Spatial",
-"class": "Map",
-"language": "GDScript",
-"path": "res://scripts/map.gd"
-}, {
 "base": "Node",
 "class": "MapMRPAS",
 "language": "GDScript",
-"path": "res://scripts/campaign/map_mrpas.gd"
+"path": "res://scripts/map/map_mrpas.gd"
 } ]
 _global_script_class_icons={
-"Campaign": "",
 "Cell": "",
 "CellFace": "",
+"CellPreset": "",
 "CellState": "",
-"Chunk": "",
 "JsonDock": "",
 "MRPAS": "",
-"Map": "",
 "MapMRPAS": ""
 }
 
@@ -70,6 +58,10 @@ _global_script_class_icons={
 
 config/name="Bardo"
 run/main_scene="res://scenes/main.tscn"
+
+[debug]
+
+gdscript/warnings/integer_division=false
 
 [display]
 
